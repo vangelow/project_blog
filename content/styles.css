@@ -1,25 +1,37 @@
 body {
     background-image: url('./images/background_sport.jpg');
     background-color: #cccccc;
+
 }
 
 body>header {
     background: #eee;
-    font-size: 24px;
-    padding: 10px;
+    border:solid;
+    border-color: #eee;
+    border-radius: 20px;
+    font-size: 35px;
+    padding: 5px;
 }
 body>header a {
     background: #77ff77;
+    border: solid;
+    border-color: #77ff77;
+    border-radius: 5px;
     font-family:Tahoma;
     text-decoration: none;
-    padding: 250px;
+    padding: 20px;
+
 
 }
 body>header a:hover {
 
-    color:#77ff77;
+    border-color:#3399ff;
+    background-color: #3399ff;
+    color:white;
+
 
 }
+
 
 body>header>a>img, body>header a  {
     display: inline-block;
@@ -33,6 +45,11 @@ body>footer {
     padding: 5px;
     margin: 10px 0;
     text-align: center;
+    border:solid;
+    border-color: #eee;
+    border-radius: 20px;
+    font-size: 25px;
+    padding: 5px;
 }
 
 table th, table td {
