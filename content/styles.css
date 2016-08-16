@@ -23,6 +23,10 @@ body>header a {
 
 
 }
+#icons {
+    background:none;
+    border:none;
+}
 body>header a:hover {
 
     border-color:#3399ff;

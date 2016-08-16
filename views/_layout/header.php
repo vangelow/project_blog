@@ -11,8 +11,8 @@
 
 <body>
 <header>
-    <a href="<?=APP_ROOT?>" ><img src="<?=APP_ROOT?>/content/images/blog_icon.png"></a>
-    <a href="<?=APP_ROOT?>/" id="icons">Home</a>
+    <a href="<?=APP_ROOT?>"id="icons" ><img src="<?=APP_ROOT?>/content/images/blog_icon.png"></a>
+    <a href="<?=APP_ROOT?>/">Home</a>
     <?php if ($this->isLoggedIn) : ?>
         <a href="<?=APP_ROOT?>/posts"name="icons">Posts</a>
         <a href="<?=APP_ROOT?>/posts/create"name="icons">Create Post</a>
