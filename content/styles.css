@@ -8,7 +8,7 @@ body>header {
     background: #eee;
     border:solid;
     border-color: #eee;
-    border-radius: 20px;
+    border-radius: 40px;
     font-size: 35px;
     padding: 5px;
 }
@@ -16,7 +16,7 @@ body>header a {
     background: #77ff77;
     border: solid;
     border-color: #77ff77;
-    border-radius: 5px;
+    border-radius: 30px;
     font-family:Tahoma;
     text-decoration: none;
     padding: 20px;
@@ -117,4 +117,28 @@ body>main:after {
     content: '';
     display: block;
     clear: both;
+}
+
+input[type=text], input[type=password] {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    margin-left: 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+
+}
+input[type=password] {
+    margin-bottom:20px;
+}
+form {
+    background-color: #DDDDDD;
+    margin-right: 70%;
+
+}
+#usernameID ,#passwordID {
+    padding-left: 10px;
+    padding-top: 10px;
+    font-size: 18px;
 }

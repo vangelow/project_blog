@@ -2,9 +2,10 @@
 
 class UsersController extends BaseController
 {
-    public function register()
-    {
-		// TODO: your user registration functionality will come here ...
+    public function register(string $username, string $password, string $password_confirm)
+
+    { $password_hash = password_hash($password, PASSWORD_DEFAULT);
+
     }
 
     public function login()
