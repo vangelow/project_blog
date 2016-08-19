@@ -1,7 +1,7 @@
 <?php $this->title = 'Register New User'; ?>
 
 <h1><?= htmlspecialchars($this->title) ?></h1>
-<form>
+<form method="post">
     <div class="container">
         <div id="usernameID"><b>Username</b></div>
         <input type="text" placeholder="Enter Username" name="username" required></br>
