@@ -1,6 +1,7 @@
 body {
     background-image: url('./images/background_sport.jpg');
     background-color: #cccccc;
+    background-repeat: no-repeat;
 
 }
 
@@ -12,6 +13,7 @@ body>header {
     font-size: 35px;
     padding: 5px;
 }
+
 body>header a {
     background: #77ff77;
     border: solid;
@@ -141,4 +143,17 @@ form {
     padding-left: 10px;
     padding-top: 10px;
     font-size: 18px;
+}
+
+#indexContent {
+    margin-top:20px;
+    padding: 12px 20px;
+    font-family: Tahoma;
+    font-size:20px;
+    margin-right: 20%;
+    background: #eee;
+    border:solid;
+    border-color: #eee;
+    border-radius: 40px;
+    margin-bottom:15px;
 }

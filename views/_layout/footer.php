@@ -1,6 +1,7 @@
 <html>
 
 <body>
+
     <footer>
         (c) Blog System, 2016
     </footer>
