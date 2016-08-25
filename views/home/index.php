@@ -14,6 +14,8 @@
 
         <h2><?=htmlentities($post['title'])?></h2>
         <p><?=htmlentities($post['content'])?></p>
+        <p><b>Автор: </b><?= $post['full_name'] ?></p>
+        <p><b>Дата: </b><?= $post['date'] ?></p>
 
     <?php endforeach;?>
     </div>

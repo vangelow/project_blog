@@ -2,12 +2,12 @@
 
 class UsersModel extends BaseModel
 {
-    public function register(string $username, string $password)
+    public function register(string $username, string $password, string $fullname)
     {
         $password_hash = password_hash($password, PASSWORD_DEFAULT);
         $statement = self::$db->prepare(
-            "INSERT INTO users(username, password_hash) VALUES (?, ?)");
-        $statement->bind_param("ss", $username, $password_hash);
+            "INSERT INTO users(username, password_hash, full_name) VALUES (?, ?, ?)");
+        $statement->bind_param("sss", $username, $password_hash, $fullname);
         $statement->execute();
         if($statement->affected_rows != 1)
             return false;

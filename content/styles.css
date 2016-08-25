@@ -121,11 +121,11 @@ body>main:after {
     clear: both;
 }
 
-input[type=text], input[type=password] {
+#inputText {
     width: 70%;
     padding: 12px 20px;
     margin: 8px 0;
-    margin-left: 10px;
+    margin-left: 70px;
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
@@ -134,15 +134,48 @@ input[type=text], input[type=password] {
 input[type=password] {
     margin-bottom:20px;
 }
-form {
+#formRegLog {
     background-color: #DDDDDD;
-    margin-right: 70%;
+    margin-left:35%;
+    margin-right:35%;
+    padding-bottom:25px;
+}
+
+#createForm {
+    background-color: #DDDDDD;
+    margin:30px 30px;
+    margin-right:50px;
+    padding:15px 20px;
+    border:solid;
+    border-color: #DDDDDD;
+    border-radius:20px;
+}
+#createText, #createContent {
+
+    padding: 12px 20px;
+    margin: 8px 0;
+    margin-left: 70px;
+    display: inline-block;
+    border: 1px solid #ccc;
 
 }
+#createText {
+    height:30px;
+    font-size:24px;
+    width: 1550px;
+    margin:0px 30px;
+}
+#createContent {
+    font-size: 24px;
+    margin:0px 30px;
+    width: 1550px; height: 487px;
+}
 #usernameID ,#passwordID {
-    padding-left: 10px;
+
+    padding-left: 20px;
     padding-top: 10px;
     font-size: 18px;
+    margin-left:53px;
 }
 
 #indexContent {
@@ -156,4 +189,52 @@ form {
     border-color: #eee;
     border-radius: 40px;
     margin-bottom:15px;
+}
+
+#buttonRegLog {
+    background: #77ff77;
+    font-family:Tahoma;
+    font-size:20px;
+    border:solid;
+    border-color: #77ff77;
+    border-radius:40px;
+    margin-left:39%;
+    margin-right:31%;
+    height: 60px;
+    width:120px;
+
+}
+#buttonRegLog:active {
+    background: #dd0000;
+    font-family:Tahoma;
+    font-size:20px;
+    border:solid;
+    border-color: #dd0000;
+    border-radius:40px;
+
+}
+#buttonCreate {
+    background: #77ff77;
+    font-family:Tahoma;
+    font-size:20px;
+    border:solid;
+    border-color: #77ff77;
+    border-radius:40px;
+    height: 60px;
+
+    margin-left:50px;
+    width: 1550px;
+    padding: 12px 20px;
+}
+#buttonCreate:active {
+    background: #dd0000;
+    font-family: Tahoma;
+    font-size: 20px;
+    border: solid;
+    border-color: #dd0000;
+    border-radius: 40px;
+    width: 1550px;
+    margin: 8px 0;
+    margin-left:50px;
+    padding: 12px 20px;
 }

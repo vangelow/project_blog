@@ -7,16 +7,18 @@ class UsersController extends BaseController
         if($this->isPost) {
             $username = $_POST['username'];
             $password = $_POST['password'];
+            $full_name = $_POST['full_name'];
             $confirm_password = $_POST['password_confirm'];
             if($password!=$confirm_password){
                 $this->addErrorMessage("Passwords do not match.");
                 return;
 
             }
-            $userId = $this->model->register($username, $password);
+            $userId = $this->model->register($username, $password, $full_name);
             if ($userId) {
-              
-                $this->addInfoMessage("Registration succesful.");
+                $_SESSION['username'] = $username;
+                $_SESSION['user_id'] = $userId;
+                $this->addInfoMessage("Registration succesful. You have been logged in.");
                 $this->redirect("");
 
         }

@@ -2,14 +2,14 @@
 
 <h1 xmlns="http://www.w3.org/1999/html"><?= htmlspecialchars($this->title) ?></h1>
 
-<form method="post">
+<form method="post" id="formRegLog">
     <div class="container">
         <div id="usernameID"><b>Username</b></div>
-        <input type="text" placeholder="Enter Username" name="username" required></br>
+        <input type="text" id="inputText" placeholder="Enter Username" name="username" required></br>
 
         <div id="passwordID"><b>Password</b></div>
-        <input type="password" placeholder="Enter Password" name="password" required>
+        <input type="password" id="inputText" placeholder="Enter Password" name="password" required>
 
-        <button type="submit">Login</button>
+        <button type="submit" id="buttonRegLog">Login</button>
     </div>
 </form>
