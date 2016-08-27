@@ -1,6 +1,4 @@
-<?php $this->title = 'Register New User'; ?>
 
-<h1><?= htmlspecialchars($this->title) ?></h1>
 <form method="post" id="formRegLog">
     <div class="container">
         <div id="usernameID"><b>Username</b></div>
@@ -14,7 +12,7 @@
         <div id="usernameID"><b>Full name</b></div>
         <input type="text" id="inputText" placeholder="Enter Fullname" name="full_name" required>
         <div>
-        <button type="submit" id="buttonRegLog">Register</button>
+        <button type="submit" id="buttonRegLog">Регистрация</button>
         </div>
     </div>
 </form>

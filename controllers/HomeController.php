@@ -12,3 +12,4 @@ class HomeController extends BaseController
         // TODO: Load a post to be displayed here ...
     }
 }
+

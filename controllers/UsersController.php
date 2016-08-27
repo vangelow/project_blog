@@ -13,13 +13,16 @@ class UsersController extends BaseController
                 $this->addErrorMessage("Passwords do not match.");
                 return;
 
+
             }
+
             $userId = $this->model->register($username, $password, $full_name);
             if ($userId) {
                 $_SESSION['username'] = $username;
                 $_SESSION['user_id'] = $userId;
                 $this->addInfoMessage("Registration succesful. You have been logged in.");
                 $this->redirect("");
+
 
         }
             else{
@@ -39,14 +42,20 @@ class UsersController extends BaseController
             $userID = $this->model->login($username, $password);
             if($userID)
             {
+
                 $_SESSION['username'] = $username;
-                $_SESSION['user_id'] = $userID;
+                $_SESSION['ID'] = $userID;
+
+
                 $this->addInfoMessage("Login succesful.");
                 $this->redirect("");
+
             }
             else {
                 $this->addErrorMessage("Login failed.");
             }
+            
+
         }
     }
 

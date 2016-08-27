@@ -3,7 +3,7 @@
 <body>
 
     <footer>
-        (c) Blog System, 2016
+        (c) Спорт блог, 2016
     </footer>
 
     <?php require_once('fill-posted-fields.php'); ?>

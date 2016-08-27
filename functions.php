@@ -93,3 +93,5 @@ function cutLongText(string $text, int $maxSize=200, bool $htmlEscape = true) : 
         $text = htmlspecialchars($text);
     return $text . $append;
 }
+
+

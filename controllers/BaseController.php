@@ -9,6 +9,7 @@ abstract class BaseController
     protected $isLoggedIn = false;
     protected $title = "";
     protected $model;
+    protected $isAdmin = false;
     protected $validationErrors = [];
 
     function __construct(string $controllerName, string $actionName)
@@ -21,6 +22,11 @@ abstract class BaseController
         }
 
         $this->isLoggedIn = isset($_SESSION['username']);
+        
+
+
+       
+
 
         // Load the default model class for the current controller
         $modelClassName = ucfirst(strtolower($controllerName)) . 'Model';
@@ -39,6 +45,10 @@ abstract class BaseController
     public function index()
     {
         // Implement the default action in the subclasses
+    }
+    public function header() {
+
+
     }
 
     public function renderView(string $viewName = null, bool $includeLayout = true)
@@ -118,4 +128,5 @@ abstract class BaseController
     {
         return count($this->validationErrors) == 0;
     }
+
 }

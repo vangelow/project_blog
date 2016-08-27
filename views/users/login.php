@@ -1,6 +1,6 @@
 <?php $this->title = 'Login'; ?>
 
-<h1 xmlns="http://www.w3.org/1999/html"><?= htmlspecialchars($this->title) ?></h1>
+
 
 <form method="post" id="formRegLog">
     <div class="container">
@@ -10,6 +10,6 @@
         <div id="passwordID"><b>Password</b></div>
         <input type="password" id="inputText" placeholder="Enter Password" name="password" required>
 
-        <button type="submit" id="buttonRegLog">Login</button>
+        <button type="submit" id="buttonRegLog">Вход</button>
     </div>
 </form>

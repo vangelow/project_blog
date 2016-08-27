@@ -10,8 +10,13 @@ class PostsModel extends HomeModel
             "order BY date DESC");
         return $statement->fetch_all(MYSQLI_ASSOC);
     }
-    public function create ()
+    public function create ($title, $content, $userId)
     {
+        $statement = self::$db->prepare(
+            "INSERT into posts(title, content, user_id) VALUES (?, ?, ?)");
+        $statement->bind_param("ssi", $title, $content, $userId);
+        $statement->execute();
+        return $statement->affected_rows==1;
 
     }
 }
