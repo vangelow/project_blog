@@ -42,7 +42,7 @@ class UsersController extends BaseController
             $userID = $this->model->login($username, $password);
             if($userID)
             {
-
+               
                 $_SESSION['username'] = $username;
                 $_SESSION['user_id'] = $userID;
 

@@ -1,5 +1,9 @@
 <?php $this->title = "Post Title" ?>
 
-<h1><?=htmlspecialchars($this->title)?></h1>
 
-<!-- TODO: display a single post here -->
+<div  id="indexContent">
+<h2><?=htmlentities($this->post['title'])?></h2>
+<p><?=htmlentities($this->post['content'])?></p>
+<p><b>Автор: </b><?= $this->post['full_name'] ?></p>
+<p><b>Дата: </b><?= $this->post['date'] ?></p>
+</div>

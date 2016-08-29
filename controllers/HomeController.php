@@ -9,7 +9,9 @@ class HomeController extends BaseController
     }
 	
 	function view($id) {
-        // TODO: Load a post to be displayed here ...
+        $this->authorize();
+       $post = $this->model->getPost($id);
+        $this->post = $post;
     }
 }
 
