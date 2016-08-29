@@ -16,10 +16,10 @@ class UsersController extends BaseController
 
             }
 
-            $userId = $this->model->register($username, $password, $full_name);
-            if ($userId) {
+            $userID = $this->model->register($username, $password, $full_name);
+            if ($userID) {
                 $_SESSION['username'] = $username;
-                $_SESSION['user_id'] = $userId;
+                $_SESSION['user_ID'] = $userID;
                 $this->addInfoMessage("Registration succesful. You have been logged in.");
                 $this->redirect("");
 
@@ -44,7 +44,7 @@ class UsersController extends BaseController
             {
 
                 $_SESSION['username'] = $username;
-                $_SESSION['ID'] = $userID;
+                $_SESSION['user_id'] = $userID;
 
 
                 $this->addInfoMessage("Login succesful.");

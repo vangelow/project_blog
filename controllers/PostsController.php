@@ -16,8 +16,8 @@ public function create ()
 
         if ($this->formValid())
         {
-            $userId = $_SESSION['ID'];
-            if($this->model->create($title, $content, $userId))
+            $userID = $_SESSION['user_id'];
+            if($this->model->create($title, $content, $userID))
             {
                 $this->addInfoMessage("Post created");
                 $this->redirect("");
