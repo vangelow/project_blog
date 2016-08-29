@@ -1,3 +1,5 @@
+<?php $this->title = "Създай новина"; ?>
+
 <form method="post" id="createForm">
 
         <p style="font-size:24px; margin-left: 40px;"><b>Заглавие</b></p>

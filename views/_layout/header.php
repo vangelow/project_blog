@@ -16,8 +16,8 @@
     <?php if ($this->isLoggedIn) : ?>
 
         <a href="<?=APP_ROOT?>/posts/create" name="icons">Създай пост</a>
-        <a href="<?=APP_ROOT?>/posts" name="icons">Постове</a>
-        <a href="<?=APP_ROOT?>/users"name="icons">Потребители</a>
+        <a href="<?=APP_ROOT?>/posts" name="icons">Новини</a>
+    <!--<a href="<?=APP_ROOT?>/users"name="icons">Потребители</a>-->
     <?php else: ?>
 
         <a href="<?=APP_ROOT?>/users/login"name="icons">Вход</a>

@@ -1,4 +1,4 @@
-<?php $this->title = "Post Title" ?>
+<?php $this->title = htmlentities($this->post['title']) ?>
 
 
 <div  id="indexContent">

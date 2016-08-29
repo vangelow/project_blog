@@ -1,4 +1,4 @@
-<?php $this->title = 'Login'; ?>
+<?php $this->title = 'Вход'; ?>
 
 
 

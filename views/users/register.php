@@ -1,3 +1,4 @@
+<?php $this->title = 'Регистрация'; ?>
 
 <form method="post" id="formRegLog">
     <div class="container">

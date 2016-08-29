@@ -1,4 +1,5 @@
-</main>
+<?php $this->title = "Новини"; ?>
+<main>
 <table>
     <tr id="tableStyle">
 
@@ -20,4 +21,4 @@
 
     <?php endforeach;?>
 </table>
-<main>
+</main>
