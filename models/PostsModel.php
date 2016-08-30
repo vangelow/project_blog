@@ -19,4 +19,21 @@ class PostsModel extends HomeModel
         return $statement->affected_rows==1;
 
     }
+
+    public function delete(int $id) : bool
+    {
+        $statement = self::$db->prepare(
+            "Delete from posts where post_id = ?");
+        $statement->bind_param("i", $id);
+        $statement->execute();
+        return $statement->affected_rows==1;
+    }
+    public function edit(string $title, string $content, int $id)
+    {
+        $statement= self::$db->prepare(
+            "UPDATE posts SET title = ?, content = ? WHERE post_id = ?");
+        $statement->bind_param("ssi", $title, $content, $id);
+        $statement->execute();
+        return $statement->affected_rows==1;
+    }
 }

@@ -5,5 +5,6 @@
 <h2><?=htmlentities($this->post['title'])?></h2>
 <p><?=htmlentities($this->post['content'])?></p>
 <p><b>Автор: </b><?= $this->post['full_name'] ?></p>
-<p><b>Дата: </b><?= $this->post['date'] ?></p>
+<p><b>Дата: </b><?= $this->post['date'] ?> <a href="<?=APP_ROOT?>/posts/delete/<?= htmlentities($this->post['post_id']);?>" id="delete"><b>Изтрий</b></a>
+    <a href="<?=APP_ROOT?>/posts/edit/<?=htmlentities($this->post['post_id']);?>" id="delete"><b>Поправи</b></a></p>
 </div>

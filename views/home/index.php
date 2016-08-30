@@ -12,7 +12,7 @@
 
     foreach ($this->posts as $post) : ?>
 
-        <h2><?=htmlentities($post['title'])?></h2>
+        <h2><a href="<?=APP_ROOT?>/home/view/<?=htmlspecialchars($post['post_id'])?>" id="postTitleLink"><?=htmlentities($post['title'])?></a></h2>
         <?php
         $string=($post['content']);
         if(strlen($string) >255) {

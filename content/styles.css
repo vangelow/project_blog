@@ -1,6 +1,7 @@
 body {
     background-image: url('./images/background_sport.jpg');
     background-color: #cccccc;
+    background-attachment:fixed;
     background-repeat: no-repeat;
 
 }
@@ -249,4 +250,15 @@ input[type=password] {
 #tableStyleRows
 {
     font-size: 20px;
+}
+#delete {
+float:right;
+    margin: 0px 10px;
+    color: black;
+
+    text-decoration: none;
+}
+#postTitleLink {
+    color: black;
+    text-decoration: none;
 }
