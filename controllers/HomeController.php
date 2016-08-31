@@ -24,6 +24,7 @@ class HomeController extends BaseController
                 if($this->model->comments($comment, $userID, $postID)) {
 
                     $this->addInfoMessage("Comment created.");
+                    header("Refresh:0");
                     
 
                 }

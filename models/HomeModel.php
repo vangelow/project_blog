@@ -37,7 +37,8 @@ class HomeModel extends BaseModel
     public function getAllComments()
     {
         $statement = self::$db->query(
-            "SELECT comments.ID,comment,authorID,postID,commentDate,full_name FROM comments LEFT JOIN users ON comments.authorID = users.ID");
+            "SELECT comments.ID,comment,authorID,postID,commentDate,full_name FROM comments LEFT JOIN users ON comments.authorID = users.ID " .
+            "ORDER by commentDate DESC");
         return $statement->fetch_all(MYSQLI_ASSOC);
     }
 }

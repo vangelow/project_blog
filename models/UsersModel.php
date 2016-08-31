@@ -2,8 +2,7 @@
 
 class UsersModel extends BaseModel
 {
-    public function register(string $username, string $password, string $fullname)
-    {
+    public function register(string $username, string $password, string $fullname) {
         $password_hash = password_hash($password, PASSWORD_DEFAULT);
         $statement = self::$db->prepare(
             "INSERT INTO users(username, password_hash, full_name) VALUES (?, ?, ?)");
@@ -16,8 +15,7 @@ class UsersModel extends BaseModel
         
 
     }
-    public function login(string $username, string $password)
-    {
+    public function login(string $username, string $password) {
         $statement=self::$db->prepare(
         "SELECT ID, password_hash FROM users WHERE username =?");
         $statement->bind_param("s", $username);

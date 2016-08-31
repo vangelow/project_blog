@@ -20,7 +20,7 @@ class PostsModel extends HomeModel
 
     public function delete(int $id) : bool {
         $statement = self::$db->prepare(
-            "Delete from posts where post_id = ?");
+            "Delete from posts where post_id = ? ");
         $statement->bind_param("i", $id);
         $statement->execute();
         return $statement->affected_rows==1;

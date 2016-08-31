@@ -19,8 +19,6 @@
         <a href="<?=APP_ROOT?>/posts/create" name="icons">Създай пост</a>
         <?php endif?>
         <a href="<?=APP_ROOT?>/posts" name="icons">Новини</a>
-
-    <!--<a href="<?=APP_ROOT?>/users"name="icons">Потребители</a>-->
     <?php else: ?>
 
         <a href="<?=APP_ROOT?>/users/login"name="icons">Вход</a>
