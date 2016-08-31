@@ -16,7 +16,7 @@ public function create ()
         if ($this->formValid()) {
             $userID = $_SESSION['user_id'];
             if($this->model->create($title, $content, $userID)) {
-                $this->addInfoMessage("Post created");
+                $this->addInfoMessage("Post created.");
                 $this->redirect("");
             }
 
@@ -58,7 +58,7 @@ public function create ()
             $content = $_POST['content'];
             if($this->formValid()){
                 $this->model->edit($title, $content, $id);
-                $this->addInfoMessage("Новината е променена.");
+                $this->addInfoMessage("Post changed.");
                 $this->redirect('posts');
             }
         }

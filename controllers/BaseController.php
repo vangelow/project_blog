@@ -23,8 +23,9 @@ abstract class BaseController
 
         $this->isLoggedIn = isset($_SESSION['username']);
         if($this->isLoggedIn){
-        $isAdmin =  $_SESSION['username'];
-            if($isAdmin=="stan"){
+        $userNow =  $_SESSION['username'];
+            
+            if($userNow=="stan"){
                 $this->isAdmin=true;
             }
             else {

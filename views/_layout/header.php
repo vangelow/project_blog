@@ -2,6 +2,7 @@
 <html>
 
 <head>
+
     <link rel="stylesheet" href="<?=APP_ROOT?>/content/styles.css" />
     <link rel="icon" href="<?=APP_ROOT?>/content/images/icon.jpg" />
     <script src="<?=APP_ROOT?>/content/scripts/jquery-3.0.0.min.js"></script>

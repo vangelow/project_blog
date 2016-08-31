@@ -12,6 +12,28 @@ class HomeController extends BaseController
         $this->authorize();
        $post = $this->model->getPost($id);
         $this->post = $post;
+        $this->comments = $this->model->getAllComments();
+        if ($this->isPost) {
+            $comment = $_POST['comment'];
+
+            if ($this->formValid()) {
+                
+                $userID = $_SESSION['user_id'];
+                $postID = $this->post['post_id'];
+
+                if($this->model->comments($comment, $userID, $postID)) {
+
+                    $this->addInfoMessage("Comment created.");
+                    
+
+                }
+                else {
+                    $this->addErrorMessage("Failed");
+                }
+
+            }
+        }
+
     }
 }
 
