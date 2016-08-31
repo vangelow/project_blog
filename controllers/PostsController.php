@@ -9,16 +9,13 @@ class PostsController extends BaseController
     }
 public function create ()
 {
-    if ($this->isPost)
-    {
+    $this->authorizeAdmin();
+    if ($this->isPost) {
         $title = $_POST['title'];
         $content = $_POST['content'];
-
-        if ($this->formValid())
-        {
+        if ($this->formValid()) {
             $userID = $_SESSION['user_id'];
-            if($this->model->create($title, $content, $userID))
-            {
+            if($this->model->create($title, $content, $userID)) {
                 $this->addInfoMessage("Post created");
                 $this->redirect("");
             }
@@ -29,7 +26,7 @@ public function create ()
 }
 
     public function delete(int $id) {
-
+        $this->authorizeAdmin();
         if($this->isPost)
         {
             if($this->model->delete($id)){
@@ -53,6 +50,7 @@ public function create ()
     }
 
     public function edit($id) {
+        $this->authorizeAdmin();
         if($this->isPost) {
             $post = $this->model->getPost($id);
             $this->post = $post;

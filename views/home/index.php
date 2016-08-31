@@ -9,7 +9,6 @@
         <h2 >Последни новини</h2>
         <p>--------------------------------------------</p>
     <?php
-
     foreach ($this->posts as $post) : ?>
 
         <h2><a href="<?=APP_ROOT?>/home/view/<?=htmlspecialchars($post['post_id'])?>" id="postTitleLink"><?=htmlentities($post['title'])?></a></h2>

@@ -14,9 +14,11 @@
     <a href="<?=APP_ROOT?>"id="icons" ><img src="<?=APP_ROOT?>/content/images/blog_icon.jpg"></a>
     <a href="<?=APP_ROOT?>/">Начало</a>
     <?php if ($this->isLoggedIn) : ?>
-
+        <?php if ($this->isAdmin) : ?>
         <a href="<?=APP_ROOT?>/posts/create" name="icons">Създай пост</a>
+        <?php endif?>
         <a href="<?=APP_ROOT?>/posts" name="icons">Новини</a>
+
     <!--<a href="<?=APP_ROOT?>/users"name="icons">Потребители</a>-->
     <?php else: ?>
 

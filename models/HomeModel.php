@@ -18,6 +18,5 @@ class HomeModel extends BaseModel
         $statement->execute();
         $result = $statement->get_result()->fetch_assoc();
         return $result;
-       
-}
+    }
 }

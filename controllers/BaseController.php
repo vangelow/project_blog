@@ -22,6 +22,16 @@ abstract class BaseController
         }
 
         $this->isLoggedIn = isset($_SESSION['username']);
+        if($this->isLoggedIn){
+        $isAdmin =  $_SESSION['username'];
+            if($isAdmin=="stan"){
+                $this->isAdmin=true;
+            }
+            else {
+                $this->isAdmin=false;
+            }
+        }
+
         
 
 
@@ -97,6 +107,13 @@ abstract class BaseController
         if (! $this->isLoggedIn) {
             $this->addErrorMessage("Please login first.");
             $this->redirect("users", "login");
+        }
+    }
+    public function authorizeAdmin() {
+        if (! $this->isAdmin) {
+            $this->addErrorMessage("You are not the admin. Please login as an admin");
+            $this->redirect("users", "login");
+
         }
     }
 

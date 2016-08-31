@@ -13,7 +13,7 @@
         <div id="usernameID"><b>Full name</b></div>
         <input type="text" id="inputText" placeholder="Enter Fullname" name="full_name" required>
         <div>
-        <button type="submit" id="buttonRegLog">Регистрация</button>
+        <button type="submit" id="buttonRegLog" style="width:145px; margin-left:34%;">Регистрация</button>
         </div>
     </div>
 </form>

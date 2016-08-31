@@ -12,18 +12,13 @@ class UsersController extends BaseController
             if($password!=$confirm_password){
                 $this->addErrorMessage("Passwords do not match.");
                 return;
-
-
             }
-
             $userID = $this->model->register($username, $password, $full_name);
             if ($userID) {
                 $_SESSION['username'] = $username;
                 $_SESSION['user_ID'] = $userID;
                 $this->addInfoMessage("Registration succesful. You have been logged in.");
                 $this->redirect("");
-
-
         }
             else{
                 $this->addErrorMessage("Registration failed.");
@@ -38,24 +33,16 @@ class UsersController extends BaseController
 		if($this->isPost){
             $username=$_POST['username'];
             $password=$_POST['password'];
-            
             $userID = $this->model->login($username, $password);
-            if($userID)
-            {
-               
+            if($userID) {
                 $_SESSION['username'] = $username;
                 $_SESSION['user_id'] = $userID;
-
-
-                $this->addInfoMessage("Login succesful.");
+                $this->addInfoMessage("");
                 $this->redirect("");
-
             }
             else {
                 $this->addErrorMessage("Login failed.");
             }
-            
-
         }
     }
 
