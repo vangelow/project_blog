@@ -33,17 +33,7 @@ class HomeModel extends BaseModel
 
     }
 
-    public function getComment(int $id)
-    {
-        $statement = self::$db->prepare(
-            "SELECT comments.ID,comment,authorID,postID,commentDate,full_name " .
-            "FROM comments LEFT JOIN users ON comments.authorID = users.ID " .
-            "WHERE comments.postID = ?");
-        $statement->bind_param("i", $id);
-        $statement->execute();
-        $result = $statement->get_result()->fetch_assoc();
-        return $result;
-    }
+    
     public function getAllComments()
     {
         $statement = self::$db->query(
