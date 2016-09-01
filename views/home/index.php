@@ -26,12 +26,6 @@
         <?php  } ?>
         <p><b>Автор: </b><?= $post['full_name'] ?></p>
         <p><b>Дата: </b><?= $post['date'] ?></p>
-
-
-
-
-
-
     <?php endforeach;?>
     </div>
 </main>

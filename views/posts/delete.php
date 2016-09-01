@@ -9,6 +9,4 @@
     <p style="font-size:24px; margin-left: 40px ;"><b>Текст</b></p>
     <textarea rows="20" cols="50"  id="createContent" name="content" disabled><?=($this->post['content'])?></textarea>
     <button type="submit" id="buttonCreate">Изтрий</button>
-
-
 </form>

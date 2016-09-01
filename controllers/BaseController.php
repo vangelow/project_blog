@@ -34,11 +34,7 @@ abstract class BaseController
         }
 
         
-
-
-       
-
-
+        
         // Load the default model class for the current controller
         $modelClassName = ucfirst(strtolower($controllerName)) . 'Model';
         if (class_exists($modelClassName)) {

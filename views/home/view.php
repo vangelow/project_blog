@@ -24,7 +24,6 @@
     <div>
 <h2>Коментари</h2>
         <br>
-
         <?php  foreach ($this->comments as $comment) :  ?>
 
             <?php
@@ -41,8 +40,4 @@
         <?php }?>
         <?php endforeach; ?>
     </div>
-
-
-
-
 </div>

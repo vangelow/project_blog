@@ -58,7 +58,7 @@ public function create ()
             $content = $_POST['content'];
             if($this->formValid()){
                 $this->model->edit($title, $content, $id);
-                $this->addInfoMessage("Post changed.");
+                $this->addInfoMessage("Post edited.");
                 $this->redirect('posts');
             }
         }

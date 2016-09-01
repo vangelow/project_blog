@@ -2,8 +2,7 @@
 
 class HomeModel extends BaseModel
 {
-    function getLatestPosts(int $postCount)
-    {
+    function getLatestPosts(int $postCount){
         $statement = self::$db->query(
             "SELECT posts.post_id,title,content,date,full_name,user_id " .
             "FROM posts LEFT JOIN users ON posts.user_id = users.id " .
@@ -11,8 +10,7 @@ class HomeModel extends BaseModel
         return $statement->fetch_all(MYSQLI_ASSOC);
     }
 
-    function getPost(int $id)
-    {
+    function getPost(int $id){
         $statement = self::$db->prepare(
             "SELECT posts.post_id, title, content, date, full_name,user_id " .
             "FROM posts LEFT JOIN users ON posts.user_id = users.id " .
@@ -23,8 +21,7 @@ class HomeModel extends BaseModel
         return $result;
     }
 
-    public function comments($comment, $userID, $postID)
-    {
+    public function comments($comment, $userID, $postID){
         $statement = self::$db->prepare(
             "INSERT into comments(comment, authorID, postID) VALUES (?, ?, ?)");
         $statement->bind_param("sii", $comment, $userID, $postID);
@@ -34,8 +31,7 @@ class HomeModel extends BaseModel
     }
 
     
-    public function getAllComments()
-    {
+    public function getAllComments(){
         $statement = self::$db->query(
             "SELECT comments.ID,comment,authorID,postID,commentDate,full_name FROM comments LEFT JOIN users ON comments.authorID = users.ID " .
             "ORDER by commentDate DESC");

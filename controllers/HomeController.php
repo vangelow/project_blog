@@ -17,16 +17,12 @@ class HomeController extends BaseController
             $comment = $_POST['comment'];
 
             if ($this->formValid()) {
-                
                 $userID = $_SESSION['user_id'];
                 $postID = $this->post['post_id'];
 
                 if($this->model->comments($comment, $userID, $postID)) {
-
                     $this->addInfoMessage("Comment created.");
                     header("Refresh:0");
-                    
-
                 }
                 else {
                     $this->addErrorMessage("Failed");
